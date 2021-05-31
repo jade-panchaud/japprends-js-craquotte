@@ -9,7 +9,7 @@ const users = [
     {username: 'Jules', passw0rd: 'test'},
 ]
 
-let person = {fname:"John", lname:"Doe", age:25};
+let person = {fname: "John", lname: "Doe", age: 25};
 let x;
 for (x in person) {
     console.log(person[x] + " ");
@@ -21,27 +21,43 @@ function add(a, b) {
     return a + b;
 }
 
-console.log(add(4,5));
+console.log(add(4, 5));
 
 function myInterval(func, nbr) {
-    for(let i = 0; i < nbr; i ++){
+    for (let i = 0; i < nbr; i++) {
         func();
     }
 }
 
-myInterval(function() {
+myInterval(function () {
     console.log('my interval')
 }, 10);
 
 let i = 0;
 
-setInterval( function (){
+setInterval(function () {
     i++;
-    console.log(add(2,i));
+    console.log(add(2, i));
 }, 1000)
 
-setTimeout(function(){
+setTimeout(function () {
     console.log('Mon i 3 sec apres ', i)
 }, 3000)
 
 console.log('Mon i ', i);
+
+
+//-------------------- JSON ------------------
+const json = {
+    "users": [
+        {"name": "me", "age": 10},
+        {"name": "you", "age": 20}
+    ]
+};
+console.log(json);
+
+const jsonStringify = JSON.stringify(json);
+console.log(jsonStringify);
+
+const jsonParse = JSON.parse(jsonStringify);
+console.log(jsonParse);
