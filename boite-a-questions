@@ -1,0 +1,5 @@
+- "this" behavior (refers to global object, with use strict...),
+- Arguments passed by value, object passed by reference,
+- The use of constructor function outside a class ?
+- Difference between call and apply (just the array for the apply
+method ?)

@@ -28,3 +28,15 @@ const add = (function() {
 console.log(add());
 console.log(add());
 console.log(add());
+
+const calcul = (function() {
+    let aCalcul = 0;
+
+    return function () {
+        aCalcul += 100;
+        aCalcul *= aCalcul;
+        return aCalcul;
+    }
+})();
+
+console.log(calcul());

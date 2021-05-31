@@ -3,6 +3,7 @@ console.log('Hello');
 // 'var' interdit
 // let et const à la place et de préférence const
 
+//object can be created without a class template
 const users = [
     {username: 'Paul', password: 'test'},
     {username: 'Jules', passw0rd: 'test'},
