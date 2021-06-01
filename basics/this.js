@@ -19,6 +19,7 @@ console.log("User: " + user.user());
 
 console.log("This alone: " + this);
 
+
 "use strict";
 function myFunction() {
     return this;

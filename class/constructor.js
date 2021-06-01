@@ -15,3 +15,11 @@ class User {
 const someone = new User("Tirelipimpon", "Carlos");
 console.log(someone.name);
 console.log(someone.fullName());
+
+function Myclass () {
+
+}
+
+Myclass.prototype.test = function(){
+
+}

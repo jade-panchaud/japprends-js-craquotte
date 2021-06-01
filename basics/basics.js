@@ -35,9 +35,12 @@ myInterval(function () {
 
 let i = 0;
 
-setInterval(function () {
+const interval = setInterval(function () {
     i++;
     console.log(add(2, i));
+    if(i > 5){
+        clearInterval(interval) // Setinterval = clearInterval obligatoire
+    }
 }, 1000)
 
 setTimeout(function () {
