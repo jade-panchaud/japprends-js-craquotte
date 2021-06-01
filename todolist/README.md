@@ -1,5 +1,38 @@
 # Getting Started with Create React App
 
+## Spec TODO list
+
+Chercher "react class component ma question" !== "functional component"
+
+- Ajouter un message 'Veuillez patienter' pendant le rafraichissement des todo
+  -> boolean dans le state (loading)
+  -> message conditionnel dans le render
+  -> en cas de succès d'erreur le message waiting disparaisse
+
+- Tu peux afficher des todo
+    - Compléter le composant TODO avec content, date, checkbox ...  
+    - Props: TODO model
+    - Ajouter un bouton supprimer au todo
+  
+
+- Tu peux ajouter un todo
+    - Dans APP, un champs texte avec un bouton, quand tu tape un todo, tu clique sur 
+    le bouton et ça ajoute en BDD un todo, après rafraichir la page
+
+
+- Tu peux supprimer un todo
+    - Quand on clique le bouton supprimer, tu notifie App, qui va rafraichir la liste
+    - Composant: ajouter une props onDelete
+    - App: ajouter la méthode handleDelete
+
+
+- Tu peux check un todo
+
+- ???????
+
+
+## Le reste
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

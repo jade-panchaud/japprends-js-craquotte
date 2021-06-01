@@ -1,5 +1,5 @@
 - map, flat map, filter, sort, forEach
-- manipulations basiques npm (yarn sur le projet)
+- manipulations basiques npm (yarn sur le projet) + dépendances
 - Base de typescript
 - Référence MDN: Mozilla Developer Network (HTML, JS, ...)
 - Promesse: c'est pas possible d'en mettre dans un map ou un foreach
