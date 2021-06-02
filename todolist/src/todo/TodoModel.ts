@@ -3,4 +3,5 @@ export interface TodoModel {
     content: string;
     date: Date;
     done: boolean;
+    category: string;
 }

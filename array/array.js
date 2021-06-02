@@ -34,3 +34,27 @@ fruitArray.forEach(addNumber)
 function addNumber(value){
     console.log("Ajout 10 " + value.fruit + " " + (value.nombre + 10));
 }
+
+
+//------------------ FOR IN inside an obj -------------
+class FileList {
+
+    constructor(files) {
+        this.files = files;
+    }
+}
+
+//Pass an array to the FileList obj
+const aListOfFiles = [
+    {filename: 'test', quantity: 2},
+    {filename: 'banane', quantity: 10}
+];
+
+const fileList = new FileList(aListOfFiles);
+const theFileList = fileList.files;
+
+//Make a for in for the value inside the array of the
+//FileList obj
+for(let x in theFileList){
+    console.log(theFileList[x]);
+}

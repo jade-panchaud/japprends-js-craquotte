@@ -1,17 +1,20 @@
 import {TodoModel} from "./TodoModel";
 
+
 let db: TodoModel[] = [
     {
         id: 1,
-        date: new Date(),
         content: 'Acheter une bière',
+        date: new Date(),
         done: false,
+        category: 'urgent'
     },
     {
         id: 2,
-        date: new Date(),
         content: 'Jouer à animal crossing',
+        date: new Date(),
         done: false,
+        category: 'normal'
     },
 ];
 
@@ -24,15 +27,26 @@ export class TodoService {
     }
 
     public async add(todo: TodoModel): Promise<void> {
-        return asyncResponse<void>(() => db.push(todo));
+        return asyncResponse<void>(() => {
+            db.push(todo);
+            console.log(db);
+        });
     }
 
     public async delete(id: number): Promise<void> {
         return asyncResponse<void>(() => {
             db = db.filter(t => t.id !== id);
+            console.log(db);
         });
     }
 
+    public async update(todo: TodoModel): Promise<void> {
+        return asyncResponse<void>(() => {
+            const todoToUpdateIndex = db.findIndex(aTodo => aTodo.id === todo.id);
+            db[todoToUpdateIndex] = todo;
+            console.log(db);
+        })
+    }
 }
 
 function asyncResponse<T>(response: () => T){

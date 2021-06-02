@@ -1,5 +1,16 @@
+DONE
 - "this" behavior (refers to global object, with use strict...),
 - Arguments passed by value, object passed by reference,
 - The use of constructor function outside a class ?
 - Difference between call and apply (just the array for the apply
 method ?)
+
+WAITING ANSWERS
+JS
+- Flat map : can we used flat map with an array like [[1], [2, 3]]
+
+REACT
+- Don't need to define props interface ?
+- Why is the constructor mandatory ?
+- Why have an onDelete prop ?
+- Passed a state or a prop to a component
