@@ -1,11 +1,18 @@
 import React from 'react';
 import './Todo.css';
+import {TodoModel} from "./TodoModel";
+
+interface Props {
+    value: TodoModel;
+    onDeleteTodo: (id: number) => void;
+    onUpdateTodo: (todo: TodoModel) => void;
+}
 
 interface State {
     checked: boolean
 }
 
-export class Todo extends React.Component<any, State> {
+export class Todo extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {
@@ -14,7 +21,7 @@ export class Todo extends React.Component<any, State> {
     }
 
     public render(){
-        const t = this.props.value.todo;
+        const t = this.props.value;
         return (
             <div className={ this.state.checked? "done" : "" } key={t.id}>
                 <input type="checkbox" checked={this.state.checked} onChange={this.handleOnCheck}/>
@@ -26,12 +33,13 @@ export class Todo extends React.Component<any, State> {
 
     public componentDidMount() {
         this.setState({
-           checked: this.props.value.todo.done
+           checked: this.props.value.done
         })
     }
 
+    //To notified the event to the parent component
     private handleOnDelete = () => {
-        const t = this.props.value.todo;
+        const t = this.props.value;
         this.props.onDeleteTodo(t.id)
     }
 
@@ -42,7 +50,7 @@ export class Todo extends React.Component<any, State> {
             checked: !actualCheck
         })
 
-        const aTodo = this.props.value.todo;
+        const aTodo = this.props.value;
         aTodo.done = !aTodo.done;
         this.props.onUpdateTodo(aTodo);
     }

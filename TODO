@@ -1,8 +1,10 @@
-- map, flat map, filter, sort, forEach
+- Référence MDN: Mozilla Developer Network (HTML, JS, ...)
+
 - manipulations basiques npm (yarn sur le projet) + dépendances
 - Base de typescript
-- Référence MDN: Mozilla Developer Network (HTML, JS, ...)
 - Promesse: c'est pas possible d'en mettre dans un map ou un foreach
-- Revoir les promesses (gestion des erreurs, chainage)
 - document.querySelector(), document.querySelectorAll()
 - document, document.body, location, history (Browser Object Model) - Au jour le jour il faut privilégier l'équivalent react
+
+- async await dans les lifecyle hook
+- Revoir les promesses (gestion des erreurs, chainage)
