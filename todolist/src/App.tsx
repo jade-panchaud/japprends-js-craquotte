@@ -89,6 +89,9 @@ class App extends React.Component<any, State> {
 
     public componentDidMount() {
         service.getAll().then(todos => this.setState({todos})).catch(err => console.error(err))
+        //Query selector return the fist element with this css class
+        //Can be more complex, like the first element of this css class with this kind of input
+        console.log(document.querySelector(".App-logo"));
     }
 
     public componentWillUnmount() {
@@ -104,16 +107,17 @@ class App extends React.Component<any, State> {
                 this.setState({
                     cities: cities
                 })
+                return cities
             })
-            .then(() => {
-                cityService.getPopulationByInseeCode(this.state.cities[0].code)
+            .then((cities) => {
+                cityService.getPopulationByInseeCode(cities[0].code)
                     .then(population => {
                         this.setState({
                             cityPopulation: population
                         })
                     })
             })
-            .catch(console.log);
+            .catch((error) => console.log(error));
     }
 
     private handleChooseCity = (ev: ChangeEvent<HTMLSelectElement>) => {

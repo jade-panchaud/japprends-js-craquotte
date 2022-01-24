@@ -1,9 +1,9 @@
 //Create a promise
 let promise = new Promise((resolve, reject) => {
-    const result = 3*5;
+    const result = 3 * 5;
 
     //Can be only one result or error
-    if(result === 12) {
+    if (result === 12) {
         resolve("OK");
     } else {
         reject("Isn't the result");
@@ -12,11 +12,11 @@ let promise = new Promise((resolve, reject) => {
 
 //Consume the promise with the success or the error
 promise.then(
-    function (result){
+    function (result) {
         console.log(result);
     },
 
-    function (error){
+    function (error) {
         console.log(error);
     }
 );
@@ -27,7 +27,7 @@ let promiseSuccess = new Promise(function (success) {
 });
 
 //Consume the promise with the success or the error
-promiseSuccess.then(function (result){
+promiseSuccess.then(function (result) {
     console.log(result);
 });
 
@@ -44,7 +44,7 @@ function hungry(isHungry) {
     });
 }
 
-isHungry = true;
+const isHungry = true;
 //Now consume the promise. Catch error if necessary and do something
 //after all (even if it's an error)
 hungry(isHungry).then(function (result) {
@@ -57,5 +57,26 @@ hungry(isHungry).then(function (result) {
         console.log("Je vais me coucher");
     }
 )
+
+
+let tryANewPromise = new Promise((resolve, reject) => {
+const pop = 10000;
+
+    if (pop > 20000) {
+        resolve("Grande ville");
+    } else {
+        reject("Petite ville");
+    }
+});
+
+tryANewPromise.then(
+    function (result) {
+        console.log(result);
+    },
+
+    function (error) {
+        console.log(error);
+    }
+);
 
 

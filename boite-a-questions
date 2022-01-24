@@ -14,6 +14,9 @@ method ?)
 WAITING ANSWERS
 JS
 
+TS
+- never type for a variable
+
 
 REACT
 - Set state : set all members every time ?

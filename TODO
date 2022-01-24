@@ -1,10 +1,10 @@
 - Référence MDN: Mozilla Developer Network (HTML, JS, ...)
 
 - manipulations basiques npm (yarn sur le projet) + dépendances
-- Base de typescript
 - Promesse: c'est pas possible d'en mettre dans un map ou un foreach
-- document.querySelector(), document.querySelectorAll()
 - document, document.body, location, history (Browser Object Model) - Au jour le jour il faut privilégier l'équivalent react
 
+- Base de typescript
 - async await dans les lifecyle hook
 - Revoir les promesses (gestion des erreurs, chainage)
+- document.querySelector(), document.querySelectorAll()
