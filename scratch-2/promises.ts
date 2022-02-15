@@ -33,3 +33,26 @@ function isEvenAsync(a: number): Promise<boolean> {
 async function isEvenAsync2(a: number): Promise<boolean> {
     return a % 2 === 0;
 }
+
+function palin(word: string): boolean {
+    let index = 0;
+    const length = (word.length - 1);
+    const halfSize = length %2 === 0 ? length/2 : length + 1;
+
+    console.log(word.split('').reverse().join(''));
+
+    while (index < halfSize){
+        if(word.charAt(index) === word.charAt(length - index)){
+            index++;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log('is palin : ' + palin('kayak'));
+console.log('is palin : ' + palin('snobons'));
+console.log('is palin : ' + palin('ommo'));
+console.log('is palin : ' + palin('tartine'));
